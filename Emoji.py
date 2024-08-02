@@ -15,9 +15,9 @@ sport_Emojis = {
 
 
 while True: 
-  emoji = input("Enter emojis: ")
-  words = emoji.split(',') # a comma lets the code know its separating two words. These words are added to the words list.
-  convert = "" # This will store the emojis 
+  emoji = input("Enter five emojis: ")
+  words = emoji.split(',') # A comma lets the code know its separating two words each time a comma occurs. These words are added to the words list.
+  convert = "" # This will store the converted emojis 
   word_Count = 0
   repeat_count = 0
   duplicate_Words = [] # Made another list to hold words that arent in it so it can check for duplicate words. 
@@ -29,11 +29,13 @@ while True:
     else: 
       repeat_count += 1
   if word_Count < 5:
-    print("Error. Number of keyweords is less than 5. Re-enter keywords")   
+    print("Error. Number of keywords is less than 5. Re-enter keywords")   
+  elif word_Count > 5:
+    print("Error. Number of keywords is more than 5. Re-enter keywords")   
   elif repeat_count > 0:
     print("Error. Repeating words. Re-enter keywords")
   else:
-    break
+    break # Stops the loop as users have followed the rules correctly.
 
 print(convert)
       
